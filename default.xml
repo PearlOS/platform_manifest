@@ -713,6 +713,9 @@
    <!-- Remove unused AOSP repos -->
   <include name="snippets/remove.xml" />
 
+   <!-- Manifest for LineageOS -->  
+   <include name="snippets/pearl.xml" />
+
   <!-- Manifest for PearlOS -->
   <include name="snippets/pearl.xml" />
 </manifest>
