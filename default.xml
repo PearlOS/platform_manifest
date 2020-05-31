@@ -798,4 +798,7 @@
   <!-- Add all PixelExperience repos -->
   <include name="snippets/pixel.xml" />
 
+  <!-- Add PearlOS repos -->
+  <include name="snippets/pearl.xml" />
+
 </manifest>

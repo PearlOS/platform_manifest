@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="pearl"
+          fetch="https://github.com/PearlOS"
+          revision="ten" />
+
+  <!-- General repos -->
+  <project path="art" name="platform_art" remote="pearl" />
+  <project path="bionic" name="platform_bionic" remote="pearl" />
+  <project path="build/make" name="platform_build_make" remote="pearl">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="platform_build_soong" remote="pearl" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="pearl" />
+  <project path="device/pearl/sepolicy" name="platform_device_pearl_sepolicy" remote="pearl" />
+  <project path="manifest" name="platform_manifest" remote="pearl" />
+  <project path="platform_testing" name="platform_testing" remote="pearl" />
+  <project path="vendor/pearl" name="platform_vendor_pearl" remote="pearl" />
+  <project path="vendor/pixelstyle" name="platform_vendor_pixelstyle" remote="pearl" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="pearl" />
+  <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="pearl" />
+  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" remote="pearl" />
+  <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" remote="pearl" />
+  <project path="packages/services/BuiltInPrintService" name="platform_packages_services_BuiltInPrintService" remote="pearl" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="pearl" />
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="pearl" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="platform_frameworks_av" remote="pearl" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="pearl" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="pearl" />
+  <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" remote="pearl" />
+  <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" remote="pearl" />
+  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="pearl" />
+
+  <!-- External repos -->
+  <project path="external/tinycompress" name="platform_external_tinycompress" remote="pearl" />
+  <project path="external/asus/stitchimage" name="platform_external_asus_stitchimage" remote="pearl" />
+
+  <!-- System Repos -->
+  <project path="system/bt" name="platform_system_bt" remote="pearl" />
+  <project path="system/core" name="platform_system_core" remote="pearl" />
+  <project path="system/netd" name="platform_system_netd" remote="pearl" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="pearl" />
+  <project path="system/vold" name="platform_system_vold" remote="pearl" />
+
+  <!-- CodeAurora additions -->
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="pearl" />
+  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="pearl" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="pearl" />
+
+</manifest>
